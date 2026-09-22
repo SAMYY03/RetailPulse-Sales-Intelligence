@@ -1,0 +1,412 @@
+[
+  {
+    "page": "executive",
+    "name": "heading",
+    "kind": "textbox",
+    "title": "",
+    "x": 24,
+    "y": 16,
+    "width": 660,
+    "height": 45
+  },
+  {
+    "page": "executive",
+    "name": "subtitle",
+    "kind": "textbox",
+    "title": "",
+    "x": 26,
+    "y": 64,
+    "width": 740,
+    "height": 27
+  },
+  {
+    "page": "executive",
+    "name": "year",
+    "kind": "slicer",
+    "title": "Year",
+    "x": 804,
+    "y": 26,
+    "width": 130,
+    "height": 66
+  },
+  {
+    "page": "executive",
+    "name": "month",
+    "kind": "slicer",
+    "title": "Month Name",
+    "x": 946,
+    "y": 26,
+    "width": 145,
+    "height": 66
+  },
+  {
+    "page": "executive",
+    "name": "state",
+    "kind": "slicer",
+    "title": "State",
+    "x": 1103,
+    "y": 26,
+    "width": 153,
+    "height": 66
+  },
+  {
+    "page": "executive",
+    "name": "footer",
+    "kind": "textbox",
+    "title": "",
+    "x": 24,
+    "y": 768,
+    "width": 1232,
+    "height": 25
+  },
+  {
+    "page": "executive",
+    "name": "kpi0",
+    "kind": "card",
+    "title": "",
+    "x": 24.0,
+    "y": 112,
+    "width": 236.8,
+    "height": 100
+  },
+  {
+    "page": "executive",
+    "name": "kpi1",
+    "kind": "card",
+    "title": "",
+    "x": 272.8,
+    "y": 112,
+    "width": 236.8,
+    "height": 100
+  },
+  {
+    "page": "executive",
+    "name": "kpi2",
+    "kind": "card",
+    "title": "",
+    "x": 521.6,
+    "y": 112,
+    "width": 236.8,
+    "height": 100
+  },
+  {
+    "page": "executive",
+    "name": "kpi3",
+    "kind": "card",
+    "title": "",
+    "x": 770.4000000000001,
+    "y": 112,
+    "width": 236.8,
+    "height": 100
+  },
+  {
+    "page": "executive",
+    "name": "kpi4",
+    "kind": "card",
+    "title": "",
+    "x": 1019.2,
+    "y": 112,
+    "width": 236.8,
+    "height": 100
+  },
+  {
+    "page": "executive",
+    "name": "revenue_trend",
+    "kind": "lineChart",
+    "title": "Revenue and prior year by month",
+    "x": 24,
+    "y": 232,
+    "width": 748,
+    "height": 252
+  },
+  {
+    "page": "executive",
+    "name": "state_revenue",
+    "kind": "barChart",
+    "title": "State contribution • scroll to explore",
+    "x": 788,
+    "y": 232,
+    "width": 468,
+    "height": 252
+  },
+  {
+    "page": "executive",
+    "name": "category_revenue",
+    "kind": "barChart",
+    "title": "Category revenue • scroll to explore",
+    "x": 24,
+    "y": 500,
+    "width": 620,
+    "height": 252
+  },
+  {
+    "page": "executive",
+    "name": "orders_trend",
+    "kind": "clusteredColumnChart",
+    "title": "Orders by month",
+    "x": 660,
+    "y": 500,
+    "width": 596,
+    "height": 252
+  },
+  {
+    "page": "customers",
+    "name": "heading",
+    "kind": "textbox",
+    "title": "",
+    "x": 24,
+    "y": 16,
+    "width": 660,
+    "height": 45
+  },
+  {
+    "page": "customers",
+    "name": "subtitle",
+    "kind": "textbox",
+    "title": "",
+    "x": 26,
+    "y": 64,
+    "width": 740,
+    "height": 27
+  },
+  {
+    "page": "customers",
+    "name": "year",
+    "kind": "slicer",
+    "title": "Year",
+    "x": 804,
+    "y": 26,
+    "width": 130,
+    "height": 66
+  },
+  {
+    "page": "customers",
+    "name": "month",
+    "kind": "slicer",
+    "title": "Month Name",
+    "x": 946,
+    "y": 26,
+    "width": 145,
+    "height": 66
+  },
+  {
+    "page": "customers",
+    "name": "state",
+    "kind": "slicer",
+    "title": "State",
+    "x": 1103,
+    "y": 26,
+    "width": 153,
+    "height": 66
+  },
+  {
+    "page": "customers",
+    "name": "footer",
+    "kind": "textbox",
+    "title": "",
+    "x": 24,
+    "y": 768,
+    "width": 1232,
+    "height": 25
+  },
+  {
+    "page": "customers",
+    "name": "kpi0",
+    "kind": "card",
+    "title": "",
+    "x": 24.0,
+    "y": 112,
+    "width": 299.0,
+    "height": 100
+  },
+  {
+    "page": "customers",
+    "name": "kpi1",
+    "kind": "card",
+    "title": "",
+    "x": 335.0,
+    "y": 112,
+    "width": 299.0,
+    "height": 100
+  },
+  {
+    "page": "customers",
+    "name": "kpi2",
+    "kind": "card",
+    "title": "",
+    "x": 646.0,
+    "y": 112,
+    "width": 299.0,
+    "height": 100
+  },
+  {
+    "page": "customers",
+    "name": "kpi3",
+    "kind": "card",
+    "title": "",
+    "x": 957.0,
+    "y": 112,
+    "width": 299.0,
+    "height": 100
+  },
+  {
+    "page": "customers",
+    "name": "category_units",
+    "kind": "barChart",
+    "title": "Category demand • sales items",
+    "x": 24,
+    "y": 232,
+    "width": 480,
+    "height": 330
+  },
+  {
+    "page": "customers",
+    "name": "category_detail",
+    "kind": "tableEx",
+    "title": "Category performance • click a row to filter",
+    "x": 520,
+    "y": 232,
+    "width": 736,
+    "height": 520
+  },
+  {
+    "page": "customers",
+    "name": "customer_trend",
+    "kind": "lineChart",
+    "title": "Customer trend",
+    "x": 24,
+    "y": 578,
+    "width": 480,
+    "height": 174
+  },
+  {
+    "page": "drivers",
+    "name": "heading",
+    "kind": "textbox",
+    "title": "",
+    "x": 24,
+    "y": 16,
+    "width": 660,
+    "height": 45
+  },
+  {
+    "page": "drivers",
+    "name": "subtitle",
+    "kind": "textbox",
+    "title": "",
+    "x": 26,
+    "y": 64,
+    "width": 740,
+    "height": 27
+  },
+  {
+    "page": "drivers",
+    "name": "year",
+    "kind": "slicer",
+    "title": "Year",
+    "x": 804,
+    "y": 26,
+    "width": 130,
+    "height": 66
+  },
+  {
+    "page": "drivers",
+    "name": "month",
+    "kind": "slicer",
+    "title": "Month Name",
+    "x": 946,
+    "y": 26,
+    "width": 145,
+    "height": 66
+  },
+  {
+    "page": "drivers",
+    "name": "state",
+    "kind": "slicer",
+    "title": "State",
+    "x": 1103,
+    "y": 26,
+    "width": 153,
+    "height": 66
+  },
+  {
+    "page": "drivers",
+    "name": "footer",
+    "kind": "textbox",
+    "title": "",
+    "x": 24,
+    "y": 768,
+    "width": 1232,
+    "height": 25
+  },
+  {
+    "page": "drivers",
+    "name": "kpi0",
+    "kind": "card",
+    "title": "",
+    "x": 24.0,
+    "y": 112,
+    "width": 299.0,
+    "height": 100
+  },
+  {
+    "page": "drivers",
+    "name": "kpi1",
+    "kind": "card",
+    "title": "",
+    "x": 335.0,
+    "y": 112,
+    "width": 299.0,
+    "height": 100
+  },
+  {
+    "page": "drivers",
+    "name": "kpi2",
+    "kind": "card",
+    "title": "",
+    "x": 646.0,
+    "y": 112,
+    "width": 299.0,
+    "height": 100
+  },
+  {
+    "page": "drivers",
+    "name": "kpi3",
+    "kind": "card",
+    "title": "",
+    "x": 957.0,
+    "y": 112,
+    "width": 299.0,
+    "height": 100
+  },
+  {
+    "page": "drivers",
+    "name": "state_growth",
+    "kind": "barChart",
+    "title": "Revenue change by state • versus prior year",
+    "x": 24,
+    "y": 232,
+    "width": 600,
+    "height": 238
+  },
+  {
+    "page": "drivers",
+    "name": "category_growth",
+    "kind": "barChart",
+    "title": "Revenue change by category • versus prior year",
+    "x": 640,
+    "y": 232,
+    "width": 616,
+    "height": 238
+  },
+  {
+    "page": "drivers",
+    "name": "experience",
+    "kind": "tableEx",
+    "title": "Customer experience by category • late rate uses eligible deliveries only",
+    "x": 24,
+    "y": 486,
+    "width": 1232,
+    "height": 266
+  }
+]

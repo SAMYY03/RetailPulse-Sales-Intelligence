@@ -1,0 +1,18 @@
+{
+  "summary": "Historical reporting period {{f000}} is compared with {{f001}}. Merchandise revenue was {{f002}}, with year-over-year growth of {{f016}}. Orders totaled {{f005}}. This is an offline template preview, not AI-generated analysis.",
+  "drivers": [
+    "Review the category and state revenue changes in the Performance Drivers dashboard to identify contributors; changes alone do not establish causes."
+  ],
+  "risks": [
+    "Late deliveries: {{f019}} of {{f018}} eligible delivered orders, a rate of {{f020}}.",
+    "The order-weighted average review score was {{f023}} across {{f022}} reviewed orders."
+  ],
+  "actions": [
+    "Investigate late deliveries by category and state before attributing causes.",
+    "Review category and state revenue changes alongside order counts."
+  ],
+  "limitations": [
+    "Historical public dataset; revenue includes all statuses and excludes freight.",
+    "Repeat purchases are measured within the selection, not lifetime retention. No causal conclusions are established."
+  ]
+}

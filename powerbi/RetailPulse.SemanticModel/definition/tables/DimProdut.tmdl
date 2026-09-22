@@ -1,0 +1,108 @@
+table DimProdut
+	lineageTag: f10986ed-b174-49be-935d-28d18eef566e
+
+	column ProductID
+		dataType: string
+		lineageTag: d46d4ffe-8d36-4aed-bf23-80fe32e8f276
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_category_name
+		dataType: string
+		lineageTag: a1e024e8-9d63-4567-823d-a16862b57711
+		summarizeBy: none
+		sourceColumn: product_category_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		lineageTag: ee634d35-8fb1-4d9b-91cc-650e0b213be7
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name_lenght
+		dataType: int64
+		formatString: 0
+		lineageTag: 2046a336-4e5d-4c04-aae5-39ee56161496
+		summarizeBy: none
+		sourceColumn: product_name_lenght
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_description_lenght
+		dataType: int64
+		formatString: 0
+		lineageTag: 88cd1c63-f964-4f8a-ab2a-aeb887cae321
+		summarizeBy: none
+		sourceColumn: product_description_lenght
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_photos_qty
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a1adbb8-11f7-4f6f-ba7b-6ee1b380ac7d
+		summarizeBy: none
+		sourceColumn: product_photos_qty
+
+		annotation SummarizationSetBy = Automatic
+
+	column weight_g
+		dataType: int64
+		formatString: 0
+		lineageTag: bc22033e-af3b-4fd7-81fe-1e6a83c23a51
+		summarizeBy: none
+		sourceColumn: weight_g
+
+		annotation SummarizationSetBy = Automatic
+
+	column length_cm
+		dataType: int64
+		formatString: 0
+		lineageTag: f6bca824-d2b4-4bcc-8971-30e982c19100
+		summarizeBy: none
+		sourceColumn: length_cm
+
+		annotation SummarizationSetBy = Automatic
+
+	column height_cm
+		dataType: int64
+		formatString: 0
+		lineageTag: 2af67a69-a4b5-46f3-9197-fea70d872c44
+		summarizeBy: none
+		sourceColumn: height_cm
+
+		annotation SummarizationSetBy = Automatic
+
+	column width_cm
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f1c31d1-25c3-4de9-b7d4-0e225d37fec8
+		summarizeBy: none
+		sourceColumn: width_cm
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProdut = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\FADOU\Desktop\RetailPulse-AI-Sales-Intelligence\data\olist_products_dataset.csv"),[Delimiter=",", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"product_id", type text}, {"product_category_name", type text}, {"product_name_lenght", Int64.Type}, {"product_description_lenght", Int64.Type}, {"product_photos_qty", Int64.Type}, {"product_weight_g", Int64.Type}, {"product_length_cm", Int64.Type}, {"product_height_cm", Int64.Type}, {"product_width_cm", Int64.Type}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Changed Type", {"product_category_name"}, CategoryTranslation, {"product_category_name"}, "CategoryTranslation", JoinKind.LeftOuter),
+				    #"Expanded CategoryTranslation" = Table.ExpandTableColumn(#"Merged Queries", "CategoryTranslation", {"product_category_name_english"}, {"CategoryTranslation.product_category_name_english"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Expanded CategoryTranslation",{"product_id", "product_category_name", "CategoryTranslation.product_category_name_english", "product_name_lenght", "product_description_lenght", "product_photos_qty", "product_weight_g", "product_length_cm", "product_height_cm", "product_width_cm"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Reordered Columns",{{"CategoryTranslation.product_category_name_english", "category"}, {"product_id", "ProductID"}, {"product_weight_g", "weight_g"}, {"product_length_cm", "length_cm"}, {"product_height_cm", "height_cm"}, {"product_width_cm", "width_cm"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

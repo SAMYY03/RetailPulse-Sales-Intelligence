@@ -1,0 +1,71 @@
+relationship 4bcf1c23-e4d1-4ad0-9e42-00dd9a4ed514
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Orders.order_purchase_timestamp
+	toColumn: LocalDateTable_4cdfdda9-f27b-4ee0-a349-ab58c666758f.Date
+
+relationship f2fd7683-5f03-4a82-b55e-747bf619496c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Orders.order_approved_at
+	toColumn: LocalDateTable_6d7c4fca-f97f-4a5b-806f-0e8a23fdf9a1.Date
+
+relationship 53385e0c-8036-48c9-9c85-a5b8c83562b2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Orders.order_delivered_carrier_date
+	toColumn: LocalDateTable_559dfa2e-6126-453d-8877-1061c9eaf57d.Date
+
+relationship 0d4922b5-ef52-49a0-9a7e-ab33e075b66e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Orders.order_delivered_customer_date
+	toColumn: LocalDateTable_bf8a23d5-1cf4-439e-a9d4-dcab717dc5fd.Date
+
+relationship 84a6e5aa-63e7-4e72-99e5-5eb2d7400396
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Orders.order_estimated_delivery_date
+	toColumn: LocalDateTable_e2062936-b358-45e9-9c33-e71e4509bf49.Date
+
+relationship 89acaed7-1a62-4479-9c94-386f528455fb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Orders.OrderDate
+	toColumn: LocalDateTable_dca93c81-59c3-4a2e-9b55-8ce0c2003d7f.Date
+
+relationship fbbc09f6-5cb1-49fe-95a6-a5676896d341
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FactSales.shipping_limit_date
+	toColumn: LocalDateTable_50b417da-37ed-4630-bc3f-2c40a88624ad.Date
+
+relationship 211e0234-40a9-4b35-97ee-e1a744360cbb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: olist_order_reviews_dataset.review_creation_date
+	toColumn: LocalDateTable_595201e8-296b-428f-aaa8-5ce350ff0896.Date
+
+relationship 37d69537-b775-465e-b72d-2ed5f51944d5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: olist_order_reviews_dataset.review_answer_timestamp
+	toColumn: LocalDateTable_71e03977-ca79-4aa2-879e-5ce2d5b5192c.Date
+
+relationship AutoDetected_71bd97bf-ad99-4e78-a769-2a7967bedfa9
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Orders.customer_id
+	toColumn: DimCustomer.CustomerID
+
+relationship AutoDetected_d81aab55-d4a8-4c44-824c-9f4840d258ed
+	fromColumn: FactSales.customerID
+	toColumn: DimCustomer.CustomerID
+
+relationship AutoDetected_86f85946-44e2-48eb-b334-c3a20b2f99ac
+	fromColumn: olist_order_payments_dataset.order_id
+	toColumn: Orders.order_id
+
+relationship AutoDetected_3c6f6d35-c42e-4fa7-88b5-74a31a6ce326
+	fromColumn: olist_order_reviews_dataset.order_id
+	toColumn: Orders.order_id
+
+relationship AutoDetected_3629a45c-367e-433e-9ba0-7017d7f3c82e
+	fromColumn: FactSales.ProductID
+	toColumn: DimProdut.ProductID
+
+relationship c52eb01a-ad94-48a7-ab34-96256e1b5107
+	fromColumn: FactSales.OrderDate
+	toColumn: DimDate.Date
+

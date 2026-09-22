@@ -1,0 +1,36 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-GB
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["DimCustomer","Orders","FactSales","olist_order_payments_dataset","olist_order_reviews_dataset","DimProdut","CategoryTranslation","measures (2)"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DimCustomer
+ref table Orders
+ref table DateTableTemplate_b832bb9d-bcd7-4028-b05b-cc5d5e702a71
+ref table LocalDateTable_4cdfdda9-f27b-4ee0-a349-ab58c666758f
+ref table LocalDateTable_6d7c4fca-f97f-4a5b-806f-0e8a23fdf9a1
+ref table LocalDateTable_559dfa2e-6126-453d-8877-1061c9eaf57d
+ref table LocalDateTable_bf8a23d5-1cf4-439e-a9d4-dcab717dc5fd
+ref table LocalDateTable_e2062936-b358-45e9-9c33-e71e4509bf49
+ref table LocalDateTable_dca93c81-59c3-4a2e-9b55-8ce0c2003d7f
+ref table FactSales
+ref table LocalDateTable_50b417da-37ed-4630-bc3f-2c40a88624ad
+ref table olist_order_payments_dataset
+ref table olist_order_reviews_dataset
+ref table LocalDateTable_595201e8-296b-428f-aaa8-5ce350ff0896
+ref table LocalDateTable_71e03977-ca79-4aa2-879e-5ce2d5b5192c
+ref table DimProdut
+ref table CategoryTranslation
+ref table DimDate
+ref table 'measures (2)'
+
+ref cultureInfo en-US
+

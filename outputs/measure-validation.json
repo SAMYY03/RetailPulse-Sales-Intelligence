@@ -1,0 +1,1546 @@
+{
+  "checks": 220,
+  "failures": [],
+  "results": [
+    {
+      "context": "total",
+      "measure": "Revenue",
+      "expected": 13591643.7,
+      "actual": 13591643.6999995,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Freight Revenue",
+      "expected": 2251909.54,
+      "actual": 2251909.54,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Total Order Value",
+      "expected": 15843553.24,
+      "actual": 15843553.2399995,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Orders",
+      "expected": 98666,
+      "actual": 98666,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Units Sold",
+      "expected": 112650,
+      "actual": 112650,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Customers",
+      "expected": 95420,
+      "actual": 95420,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "AOV",
+      "expected": 137.75407637889444,
+      "actual": 137.75407637888938,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "AOV Including Freight",
+      "expected": 160.57763809214927,
+      "actual": 160.57763809214418,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Units per Order",
+      "expected": 1.1417306873695092,
+      "actual": 1.1417306873695092,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Revenue per Customer",
+      "expected": 142.44019807168308,
+      "actual": 142.44019807167786,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Repeat Customers",
+      "expected": 2913,
+      "actual": 2913,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Repeat Customer Rate",
+      "expected": 0.030528191154894153,
+      "actual": 0.030528191154894153,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Revenue PY",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "YoY Revenue Change",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "YoY Revenue Growth %",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Delivered Orders",
+      "expected": 96478,
+      "actual": 96478,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Delivery Eligible Orders",
+      "expected": 96470,
+      "actual": 96470,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Late Orders",
+      "expected": 6534,
+      "actual": 6534,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Late Delivery Rate",
+      "expected": 0.06773090079817559,
+      "actual": 0.06773090079817559,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Average Delivery Days",
+      "expected": 12.496848761272934,
+      "actual": 12.496848761272934,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Reviewed Orders",
+      "expected": 97917,
+      "actual": 97917,
+      "passed": true
+    },
+    {
+      "context": "total",
+      "measure": "Average Review Score",
+      "expected": 4.105054961515024,
+      "actual": 4.105054961515024,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Revenue",
+      "expected": 6155806.98,
+      "actual": 6155806.980000094,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Freight Revenue",
+      "expected": 986865.45,
+      "actual": 986865.45,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Total Order Value",
+      "expected": 7142672.43,
+      "actual": 7142672.430000094,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Orders",
+      "expected": 44579,
+      "actual": 44579,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Units Sold",
+      "expected": 50864,
+      "actual": 50864,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Customers",
+      "expected": 43225,
+      "actual": 43225,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "AOV",
+      "expected": 138.087596850535,
+      "actual": 138.0875968505371,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "AOV Including Freight",
+      "expected": 160.2250483411472,
+      "actual": 160.2250483411493,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Units per Order",
+      "expected": 1.1409856658964983,
+      "actual": 1.1409856658964983,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Revenue per Customer",
+      "expected": 142.4131169462117,
+      "actual": 142.41311694621385,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Repeat Customers",
+      "expected": 1227,
+      "actual": 1227,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Repeat Customer Rate",
+      "expected": 0.02838635049161365,
+      "actual": 0.02838635049161365,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Revenue PY",
+      "expected": 49785.92,
+      "actual": 49785.92,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "YoY Revenue Change",
+      "expected": 6106021.0600000005,
+      "actual": 6106021.0600001905,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "YoY Revenue Growth %",
+      "expected": 122.6455403455435,
+      "actual": 122.6455403455473,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Delivered Orders",
+      "expected": 43428,
+      "actual": 43428,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Delivery Eligible Orders",
+      "expected": 43426,
+      "actual": 43426,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Late Orders",
+      "expected": 2453,
+      "actual": 2453,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Late Delivery Rate",
+      "expected": 0.0564868972504951,
+      "actual": 0.0564868972504951,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Average Delivery Days",
+      "expected": 12.97904481186386,
+      "actual": 12.97904481186386,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Reviewed Orders",
+      "expected": 44205,
+      "actual": 44205,
+      "passed": true
+    },
+    {
+      "context": "year2017",
+      "measure": "Average Review Score",
+      "expected": 4.114904045545376,
+      "actual": 4.114904045545376,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Revenue",
+      "expected": 7386050.8,
+      "actual": 7386050.800000047,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Freight Revenue",
+      "expected": 1257646.8,
+      "actual": 1257646.8,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Total Order Value",
+      "expected": 8643697.6,
+      "actual": 8643697.600000048,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Orders",
+      "expected": 53775,
+      "actual": 53775,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Units Sold",
+      "expected": 61416,
+      "actual": 61416,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Customers",
+      "expected": 52565,
+      "actual": 52565,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "AOV",
+      "expected": 137.35101441190145,
+      "actual": 137.35101441190233,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "AOV Including Freight",
+      "expected": 160.73821664342165,
+      "actual": 160.73821664342256,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Units per Order",
+      "expected": 1.1420920502092051,
+      "actual": 1.1420920502092051,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Revenue per Customer",
+      "expected": 140.5127137829354,
+      "actual": 140.51271378293632,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Repeat Customers",
+      "expected": 1124,
+      "actual": 1124,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Repeat Customer Rate",
+      "expected": 0.02138304955769048,
+      "actual": 0.02138304955769048,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Revenue PY",
+      "expected": 6155806.98,
+      "actual": 6155806.98000019,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "YoY Revenue Change",
+      "expected": 1230243.8199999994,
+      "actual": 1230243.8199999277,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "YoY Revenue Growth %",
+      "expected": 0.19985094139517665,
+      "actual": 0.19985094139515883,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Delivered Orders",
+      "expected": 52783,
+      "actual": 52783,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Delivery Eligible Orders",
+      "expected": 52777,
+      "actual": 52777,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Late Orders",
+      "expected": 4078,
+      "actual": 4078,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Late Delivery Rate",
+      "expected": 0.07726850711484169,
+      "actual": 0.07726850711484169,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Average Delivery Days",
+      "expected": 12.063588305511871,
+      "actual": 12.063588305511871,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Reviewed Orders",
+      "expected": 53405,
+      "actual": 53405,
+      "passed": true
+    },
+    {
+      "context": "year2018",
+      "measure": "Average Review Score",
+      "expected": 4.099397684361639,
+      "actual": 4.099397684361639,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Revenue",
+      "expected": 895507.22,
+      "actual": 895507.2199999978,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Freight Revenue",
+      "expected": 163220.81,
+      "actual": 163220.81,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Total Order Value",
+      "expected": 1058728.03,
+      "actual": 1058728.0299999977,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Orders",
+      "expected": 6273,
+      "actual": 6273,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Units Sold",
+      "expected": 7092,
+      "actual": 7092,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Customers",
+      "expected": 6211,
+      "actual": 6211,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "AOV",
+      "expected": 142.75581380519688,
+      "actual": 142.7558138051965,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "AOV Including Freight",
+      "expected": 168.77539135979595,
+      "actual": 168.77539135979558,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Units per Order",
+      "expected": 1.1305595408895266,
+      "actual": 1.1305595408895266,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Revenue per Customer",
+      "expected": 144.18084366446627,
+      "actual": 144.1808436644659,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Repeat Customers",
+      "expected": 61,
+      "actual": 61,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Repeat Customer Rate",
+      "expected": 0.0098212848172597,
+      "actual": 0.0098212848172597,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Revenue PY",
+      "expected": 498031.48,
+      "actual": 498031.48000000056,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "YoY Revenue Change",
+      "expected": 397475.74,
+      "actual": 397475.7399999959,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "YoY Revenue Growth %",
+      "expected": 0.7980936064523472,
+      "actual": 0.7980936064523381,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Delivered Orders",
+      "expected": 6159,
+      "actual": 6159,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Delivery Eligible Orders",
+      "expected": 6156,
+      "actual": 6156,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Late Orders",
+      "expected": 208,
+      "actual": 208,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Late Delivery Rate",
+      "expected": 0.03378817413905133,
+      "actual": 0.03378817413905133,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Average Delivery Days",
+      "expected": 8.887751786874594,
+      "actual": 8.887751786874594,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Reviewed Orders",
+      "expected": 6228,
+      "actual": 6228,
+      "passed": true
+    },
+    {
+      "context": "month201807",
+      "measure": "Average Review Score",
+      "expected": 4.271435452793834,
+      "actual": 4.271435452793834,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Revenue",
+      "expected": 5202955.05,
+      "actual": 5202955.0500000855,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Freight Revenue",
+      "expected": 718723.07,
+      "actual": 718723.07,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Total Order Value",
+      "expected": 5921678.12,
+      "actual": 5921678.120000086,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Orders",
+      "expected": 41375,
+      "actual": 41375,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Units Sold",
+      "expected": 47449,
+      "actual": 47449,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Customers",
+      "expected": 39981,
+      "actual": 39981,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "AOV",
+      "expected": 125.75117945619336,
+      "actual": 125.75117945619542,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "AOV Including Freight",
+      "expected": 143.12212978851963,
+      "actual": 143.1221297885217,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Units per Order",
+      "expected": 1.1468036253776435,
+      "actual": 1.1468036253776435,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Revenue per Customer",
+      "expected": 130.13569070308395,
+      "actual": 130.1356907030861,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Repeat Customers",
+      "expected": 1256,
+      "actual": 1256,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Repeat Customer Rate",
+      "expected": 0.0314149220879918,
+      "actual": 0.0314149220879918,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Revenue PY",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "YoY Revenue Change",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "YoY Revenue Growth %",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Delivered Orders",
+      "expected": 40501,
+      "actual": 40501,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Delivery Eligible Orders",
+      "expected": 40494,
+      "actual": 40494,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Late Orders",
+      "expected": 1820,
+      "actual": 1820,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Late Delivery Rate",
+      "expected": 0.044944930113103174,
+      "actual": 0.044944930113103174,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Average Delivery Days",
+      "expected": 8.70057292438386,
+      "actual": 8.70057292438386,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Reviewed Orders",
+      "expected": 41109,
+      "actual": 41109,
+      "passed": true
+    },
+    {
+      "context": "stateSP",
+      "measure": "Average Review Score",
+      "expected": 4.19561004484014,
+      "actual": 4.195610044840141,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Revenue",
+      "expected": 1036988.68,
+      "actual": 1036988.6799999936,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Freight Revenue",
+      "expected": 204693.04,
+      "actual": 204693.04,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Total Order Value",
+      "expected": 1241681.72,
+      "actual": 1241681.7199999937,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Orders",
+      "expected": 9417,
+      "actual": 9417,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Units Sold",
+      "expected": 11115,
+      "actual": 11115,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Customers",
+      "expected": 9145,
+      "actual": 9145,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "AOV",
+      "expected": 110.1187936710205,
+      "actual": 110.11879367101982,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "AOV Including Freight",
+      "expected": 131.85533821811617,
+      "actual": 131.8553382181155,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Units per Order",
+      "expected": 1.1803122013380056,
+      "actual": 1.1803122013380056,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Revenue per Customer",
+      "expected": 113.39406014215419,
+      "actual": 113.39406014215349,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Repeat Customers",
+      "expected": 252,
+      "actual": 252,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Repeat Customer Rate",
+      "expected": 0.027556041552761073,
+      "actual": 0.027556041552761073,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Revenue PY",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "YoY Revenue Change",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "YoY Revenue Growth %",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Delivered Orders",
+      "expected": 9272,
+      "actual": 9272,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Delivery Eligible Orders",
+      "expected": 9272,
+      "actual": 9272,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Late Orders",
+      "expected": 689,
+      "actual": 689,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Late Delivery Rate",
+      "expected": 0.0743097497842968,
+      "actual": 0.0743097497842968,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Average Delivery Days",
+      "expected": 12.93183779119931,
+      "actual": 12.93183779119931,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Reviewed Orders",
+      "expected": 9313,
+      "actual": 9313,
+      "passed": true
+    },
+    {
+      "context": "category",
+      "measure": "Average Review Score",
+      "expected": 3.9707398260496083,
+      "actual": 3.9707398260496083,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Revenue",
+      "expected": 13221498.11,
+      "actual": 13221498.109999485,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Freight Revenue",
+      "expected": 2198275.64,
+      "actual": 2198275.64,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Total Order Value",
+      "expected": 15419773.75,
+      "actual": 15419773.749999486,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Orders",
+      "expected": 96478,
+      "actual": 96478,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Units Sold",
+      "expected": 110197,
+      "actual": 110197,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Customers",
+      "expected": 93358,
+      "actual": 93358,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "AOV",
+      "expected": 137.0415857501192,
+      "actual": 137.04158575011385,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "AOV Including Freight",
+      "expected": 159.82683876116835,
+      "actual": 159.82683876116303,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Units per Order",
+      "expected": 1.1421982213561641,
+      "actual": 1.1421982213561641,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Revenue per Customer",
+      "expected": 141.62147978748473,
+      "actual": 141.62147978747922,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Repeat Customers",
+      "expected": 2801,
+      "actual": 2801,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Repeat Customer Rate",
+      "expected": 0.03000278497825575,
+      "actual": 0.03000278497825575,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Revenue PY",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "YoY Revenue Change",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "YoY Revenue Growth %",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Delivered Orders",
+      "expected": 96478,
+      "actual": 96478,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Delivery Eligible Orders",
+      "expected": 96470,
+      "actual": 96470,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Late Orders",
+      "expected": 6534,
+      "actual": 6534,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Late Delivery Rate",
+      "expected": 0.06773090079817559,
+      "actual": 0.06773090079817559,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Average Delivery Days",
+      "expected": 12.496848761272934,
+      "actual": 12.496848761272934,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Reviewed Orders",
+      "expected": 95832,
+      "actual": 95832,
+      "passed": true
+    },
+    {
+      "context": "delivered",
+      "measure": "Average Review Score",
+      "expected": 4.156186520855942,
+      "actual": 4.156186520855942,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Revenue",
+      "expected": 95235.27,
+      "actual": 95235.27000000003,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Freight Revenue",
+      "expected": 10650.45,
+      "actual": 10650.45,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Total Order Value",
+      "expected": 105885.72,
+      "actual": 105885.72000000003,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Orders",
+      "expected": 461,
+      "actual": 461,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Units Sold",
+      "expected": 542,
+      "actual": 542,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Customers",
+      "expected": 461,
+      "actual": 461,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "AOV",
+      "expected": 206.58409978308026,
+      "actual": 206.58409978308032,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "AOV Including Freight",
+      "expected": 229.68702819956616,
+      "actual": 229.6870281995662,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Units per Order",
+      "expected": 1.175704989154013,
+      "actual": 1.175704989154013,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Revenue per Customer",
+      "expected": 206.58409978308026,
+      "actual": 206.58409978308032,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Repeat Customers",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Repeat Customer Rate",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Revenue PY",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "YoY Revenue Change",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "YoY Revenue Growth %",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Delivered Orders",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Delivery Eligible Orders",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Late Orders",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Late Delivery Rate",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Average Delivery Days",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Reviewed Orders",
+      "expected": 444,
+      "actual": 444,
+      "passed": true
+    },
+    {
+      "context": "canceled",
+      "measure": "Average Review Score",
+      "expected": 1.572072072072072,
+      "actual": 1.572072072072072,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Revenue",
+      "expected": 207464.77,
+      "actual": 207464.7700000003,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Freight Revenue",
+      "expected": 32000.56,
+      "actual": 32000.56,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Total Order Value",
+      "expected": 239465.33,
+      "actual": 239465.3300000003,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Orders",
+      "expected": 1927,
+      "actual": 1927,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Units Sold",
+      "expected": 2230,
+      "actual": 2230,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Customers",
+      "expected": 1874,
+      "actual": 1874,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "AOV",
+      "expected": 107.66204981837052,
+      "actual": 107.66204981837069,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "AOV Including Freight",
+      "expected": 124.2684639335755,
+      "actual": 124.26846393357566,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Units per Order",
+      "expected": 1.1572392319667877,
+      "actual": 1.1572392319667877,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Revenue per Customer",
+      "expected": 110.70692102454642,
+      "actual": 110.70692102454659,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Repeat Customers",
+      "expected": 48,
+      "actual": 48,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Repeat Customer Rate",
+      "expected": 0.025613660618996798,
+      "actual": 0.025613660618996798,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Revenue PY",
+      "expected": 29.9,
+      "actual": 29.9,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "YoY Revenue Change",
+      "expected": 207434.87,
+      "actual": 207434.87000000084,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "YoY Revenue Growth %",
+      "expected": 6937.621070234114,
+      "actual": 6937.621070234142,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Delivered Orders",
+      "expected": 1891,
+      "actual": 1891,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Delivery Eligible Orders",
+      "expected": 1891,
+      "actual": 1891,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Late Orders",
+      "expected": 80,
+      "actual": 80,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Late Delivery Rate",
+      "expected": 0.04230565838180857,
+      "actual": 0.04230565838180857,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Average Delivery Days",
+      "expected": 10.34479111581174,
+      "actual": 10.34479111581174,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Reviewed Orders",
+      "expected": 1903,
+      "actual": 1903,
+      "passed": true
+    },
+    {
+      "context": "combined",
+      "measure": "Average Review Score",
+      "expected": 4.102469784550709,
+      "actual": 4.102469784550709,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Revenue",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Freight Revenue",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Total Order Value",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Orders",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Units Sold",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Customers",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "AOV",
+      "expected": 0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "AOV Including Freight",
+      "expected": 0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Units per Order",
+      "expected": 0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Revenue per Customer",
+      "expected": 0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Repeat Customers",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Repeat Customer Rate",
+      "expected": 0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Revenue PY",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "YoY Revenue Change",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "YoY Revenue Growth %",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Delivered Orders",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Delivery Eligible Orders",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Late Orders",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Late Delivery Rate",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Average Delivery Days",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Reviewed Orders",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "context": "empty",
+      "measure": "Average Review Score",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    }
+  ]
+}

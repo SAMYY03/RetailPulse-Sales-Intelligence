@@ -1,0 +1,139 @@
+table FactSales
+	lineageTag: fc83bc0e-65e0-4907-9dfb-1b8e52dc86e7
+
+	column OrderID
+		dataType: string
+		lineageTag: 6fc56267-0e4d-47f3-8b09-8637117f2ab2
+		summarizeBy: none
+		sourceColumn: OrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderItemID
+		dataType: int64
+		formatString: 0
+		lineageTag: aa5576e0-7097-45e4-af84-11b66154d798
+		summarizeBy: count
+		sourceColumn: OrderItemID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: string
+		lineageTag: 85b63f82-0c3f-4468-a38a-249954de26fd
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SellerID
+		dataType: string
+		lineageTag: 2fd37eb3-3689-4c5c-b117-83bf9d56d67b
+		summarizeBy: none
+		sourceColumn: SellerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column shipping_limit_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 92ce0461-9d98-4edc-b4de-c05b7613f1b6
+		summarizeBy: none
+		sourceColumn: shipping_limit_date
+
+		variation Variation
+			isDefault
+			relationship: fbbc09f6-5cb1-49fe-95a6-a5676896d341
+			defaultHierarchy: LocalDateTable_50b417da-37ed-4630-bc3f-2c40a88624ad.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Price
+		dataType: double
+		lineageTag: f63c88f0-b10b-47d3-b65a-47863087477e
+		summarizeBy: sum
+		sourceColumn: Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Freightvalue
+		dataType: double
+		lineageTag: c1395242-66f9-4b69-8c09-e6f26acb55a0
+		summarizeBy: sum
+		sourceColumn: Freightvalue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column customerID
+		dataType: string
+		lineageTag: 9a16dba5-9689-4cf7-95fd-1a093cea00d3
+		summarizeBy: none
+		sourceColumn: customerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.order_status'
+		dataType: string
+		lineageTag: 2bd77424-e64d-415e-be82-92816586329d
+		summarizeBy: none
+		sourceColumn: Orders.order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4f16875d-c400-4ed8-ae6f-fb344944f9bd
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column deliveryDay
+		dataType: string
+		lineageTag: 68fe8d0d-62e3-450a-9014-d534e9d7c63c
+		summarizeBy: none
+		sourceColumn: deliveryDay
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeliveryDelayDays
+		dataType: string
+		lineageTag: b1ecd44c-1c9d-4bd5-8a6b-6d2386b699f6
+		summarizeBy: none
+		sourceColumn: DeliveryDelayDays
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesValue
+		dataType: string
+		lineageTag: f384c551-b50c-4ca4-bd23-967ee6ae1185
+		summarizeBy: none
+		sourceColumn: SalesValue
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactSales = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\FADOU\Desktop\RetailPulse-AI-Sales-Intelligence\data\olist_order_items_dataset.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"order_id", type text}, {"order_item_id", Int64.Type}, {"product_id", type text}, {"seller_id", type text}, {"shipping_limit_date", type datetime}, {"price", type number}, {"freight_value", type number}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Changed Type", {"order_id"}, Orders, {"order_id"}, "Orders", JoinKind.LeftOuter),
+				    #"Expanded Orders" = Table.ExpandTableColumn(#"Merged Queries", "Orders", {"customer_id", "order_status", "OrderDate", "deliveryDay", "DeliveryDelayDays"}, {"Orders.customer_id", "Orders.order_status", "Orders.OrderDate", "Orders.deliveryDay", "Orders.DeliveryDelayDays"}),
+				    #"Added Custom" = Table.AddColumn(#"Expanded Orders", "SalesValue", each [price] + [freight_value]),
+				    #"Renamed Columns" = Table.RenameColumns(#"Added Custom",{{"order_id", "OrderID"}, {"order_item_id", "OrderItemID"}, {"product_id", "ProductID"}, {"seller_id", "SellerID"}, {"price", "Price"}, {"freight_value", "Freightvalue"}, {"Orders.customer_id", "customerID"}, {"Orders.OrderDate", "OrderDate"}, {"Orders.deliveryDay", "deliveryDay"}, {"Orders.DeliveryDelayDays", "DeliveryDelayDays"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

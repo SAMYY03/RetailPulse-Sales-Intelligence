@@ -1,0 +1,11 @@
+src/vendor/
+src/schemas/cache/
+**/__pycache__/
+**/.pbi/cache.abf
+**/.pbi/localSettings.json
+outputs/*before*.pbix
+outputs/model-before*.json
+.env
+data/*.csv
+frjkt.pbix
+outputs/last_api_error.txt
