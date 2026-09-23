@@ -14,6 +14,8 @@ I built RetailPulse as a three-page Power BI report that keeps those questions c
 
 The final model contains 22 DAX measures. A separate Python workflow recalculates the results from the CSV files and checks them across ten filter scenarios.
 
+An optional insight layer reads seven allowlisted measures from the completed validation file and sends only those aggregates to a language-model API. The response follows a fixed schema, uses placeholders for every number and is checked again before the Markdown brief is saved. This keeps the narrative traceable to the measures shown in the report.
+
 ## The modeling work that mattered
 
 The original customer field identifies a customer within an order, so I used the persistent customer identifier for customer counts and repeat-purchase measures. Delivery records are counted once per order. Review scores are first averaged within each order, then averaged across orders so an order with several review rows does not carry extra weight.

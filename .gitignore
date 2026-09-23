@@ -9,3 +9,5 @@ outputs/model-before*.json
 data/*.csv
 frjkt.pbix
 outputs/last_api_error.txt
+outputs/weekly_sales_brief.md
+outputs/weekly_sales_brief.provenance.json

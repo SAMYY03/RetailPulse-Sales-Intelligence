@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-09-23T08:35:03.164983+00:00",
+  "mode": "sample",
+  "model": null,
+  "response_id": null,
+  "input_sha256": "8148fd400b31326245fa9eae2dc200b780744f362101315f4bcc52a133c9eaff",
+  "context": "month201807",
+  "facts": [
+    "revenue",
+    "growth",
+    "orders",
+    "customers",
+    "late_rate",
+    "delivery_days",
+    "review_score"
+  ]
+}

@@ -34,6 +34,26 @@ For July 2018, compared with July 2017:
 
 These are historical observations, not causal conclusions. The dashboard is designed to help narrow the next investigation by category, state and order volume.
 
+## AI-generated insight layer
+
+The optional narrator turns a small allowlist of validated measures into a structured management brief:
+
+`validated metrics → allowlisted facts → LLM → checked structured output → Markdown brief`
+
+The script reads seven July 2018 measures from `outputs/measure-validation.json`. It sends only those aggregate facts, requires every number to reference a supplied placeholder, rejects unknown numbers, limits the response to 180 words and saves the result to `outputs/weekly_sales_brief.md`. Raw order and customer records are never sent.
+
+- [Narrator script](src/generate_weekly_brief.py)
+- [Checked sample layout](outputs/weekly_sales_brief.sample.md)
+- [Official Structured Outputs documentation](https://developers.openai.com/api/docs/guides/structured-outputs)
+
+To inspect the output format without an API call:
+
+```powershell
+python src/generate_weekly_brief.py --sample
+```
+
+To generate a live draft, set `OPENAI_API_KEY` in your local environment and run the script without `--sample`. The key is read from memory and is never written to the repository.
+
 ## Modeling choices
 
 - Customer counts use the persistent customer identifier rather than the order-specific identifier.
@@ -67,7 +87,8 @@ Raw CSV files, local model caches and backup files are excluded from this reposi
 - [Implementation notes and KPI definitions](documentation/project-continuation.md)
 - [DAX measures](powerbi/measures.dax)
 - [Independent validation results](outputs/measure-validation.json)
+- [Weekly brief sample](outputs/weekly_sales_brief.sample.md)
 
 ## Tools used
 
-Power BI Desktop, Power Query, DAX and Python.
+Power BI Desktop, Power Query, DAX, Python and the OpenAI Responses API.

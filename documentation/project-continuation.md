@@ -26,3 +26,7 @@ All 220 source-data comparisons passed for 22 measures. The checks cover totals,
 For the July 2018 validation scenario: revenue was 895,507.22; year-over-year revenue growth was 79.81%; the late-delivery rate was 3.38% (208 of 6,156 eligible orders); average delivery time was 8.89 calendar days; and the average review score was 4.27 out of 5 across 6,228 reviewed orders.
 
 The key artifacts are `outputs/measure-validation.json`, `outputs/portfolio-kpi-export.json` and `powerbi/measures.dax`.
+
+## Generated insight layer
+
+`src/generate_weekly_brief.py` turns seven validated July 2018 measures into a short structured brief. It sends aggregate facts only, rejects unsupported numeric claims and records the source context for every displayed value. `outputs/weekly_sales_brief.sample.md` demonstrates the checked rendering path without making an API request.
