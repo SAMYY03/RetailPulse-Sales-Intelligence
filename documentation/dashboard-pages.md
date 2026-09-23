@@ -17,7 +17,7 @@ YoY growth, late-delivery rate, average delivery days and average review score; 
 ## Interaction and interpretation
 
 - Year, month and state slicers are configured consistently on all pages, with sync groups.
-- The initial year selection is 2018. This dataset contains an incomplete 2018; the page footer discloses this. Use July 2018 for the narrator demonstration.
+- The initial year selection is 2018. This dataset contains an incomplete 2018, and the page footer discloses this. Use July 2018 for a focused year-over-year walkthrough.
 - Clearing year filters can make YoY measures blank intentionally; they require a single calendar year selection.
 - Category charts expose the full list via scrolling. Tables support sorting and selecting categories.
 - Revenue includes all order statuses and excludes freight. It is not net recognized revenue.

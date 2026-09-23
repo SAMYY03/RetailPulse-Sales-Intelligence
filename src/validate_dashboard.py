@@ -1,5 +1,6 @@
 """Validate PBIR schemas and measure bindings. Downloads only Microsoft public schemas."""
 import json
+import re
 import sys
 import urllib.request
 from pathlib import Path
@@ -28,17 +29,29 @@ for path in files:
     validator=Draft7Validator(schema, resolver=RefResolver(base_uri=data['$schema'],referrer=schema,handlers={'https':retrieve}))
     for error in validator.iter_errors(data): errors.append(f'{path.relative_to(ROOT)}: {list(error.path)}: {error.message}')
     checked+=1
-model_path=ROOT/'powerbi'/'RetailPulse.SemanticModel'/'model.bim'
-if not model_path.exists(): model_path=ROOT/'outputs'/'model-after.json'
-model=json.loads(model_path.read_text(encoding='utf-8-sig'))['model']
-tables={t['name']:t for t in model['tables']}
+def tmdl_name(value):
+    value=value.strip()
+    if value.startswith("'") and value.endswith("'"):
+        return value[1:-1].replace("''", "'")
+    return value
+
+tables={}
+for path in (ROOT/'powerbi'/'RetailPulse.SemanticModel'/'definition'/'tables').glob('*.tmdl'):
+    text=path.read_text(encoding='utf-8-sig')
+    table_match=re.search(r'^table\s+(.+)$', text, re.MULTILINE)
+    if not table_match: continue
+    table=tables.setdefault(tmdl_name(table_match.group(1)), {'columns':set(),'measures':set()})
+    for match in re.finditer(r'^\s*column\s+(.+?)(?:\s*=.*)?$', text, re.MULTILINE):
+        table['columns'].add(tmdl_name(match.group(1)))
+    for match in re.finditer(r'^\s*measure\s+(.+?)\s*=', text, re.MULTILINE):
+        table['measures'].add(tmdl_name(match.group(1)))
 for path in (ROOT/'powerbi'/'RetailPulse.Report').rglob('visual.json'):
     data=json.loads(path.read_text(encoding='utf-8'))
     for role in data['visual'].get('query',{}).get('queryState',{}).values():
         for projection in role['projections']:
             kind,exp=next(iter(projection['field'].items()))
             table=tables[exp['Expression']['SourceRef']['Entity']]
-            assert exp['Property'] in {v['name'] for v in table['measures' if kind=='Measure' else 'columns']}, projection
+            assert exp['Property'] in table['measures' if kind=='Measure' else 'columns'], projection
     p=data['position']; assert p['x']>=0 and p['y']>=0 and p['x']+p['width']<=1280 and p['y']+p['height']<=800
 print(f'{checked} files schema-checked; {len(errors)} errors; all visual bindings and page bounds verified.')
 for error in errors: print(error)

@@ -46,7 +46,7 @@ table DimCustomer
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\FADOU\Desktop\RetailPulse-AI-Sales-Intelligence\data\olist_customers_dataset.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Path\To\RetailPulse-Sales-Intelligence\data\olist_customers_dataset.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"customer_id", type text}, {"customer_unique_id", type text}, {"customer_zip_code_prefix", Int64.Type}, {"customer_city", type text}, {"customer_state", type text}}),
 				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"customer_city", "City"}, {"customer_state", "State"}, {"customer_id", "CustomerID"}})

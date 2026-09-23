@@ -73,7 +73,7 @@ def page(pid,title,subtitle):
     slicer(pid,'year','DimDate','Year',804,130,2018)
     slicer(pid,'month','DimDate','Month Name',946,145)
     slicer(pid,'state','DimCustomer','State',1103,153)
-    text(pid,'footer','RETAILPULSE AI  /  Olist historical data 2016–2018  •  2018 is incomplete  •  Revenue includes all statuses; excludes freight',24,768,1232,25,9)
+    text(pid,'footer','RETAILPULSE  /  Olist historical data 2016–2018  •  2018 is incomplete  •  Revenue includes all statuses; excludes freight',24,768,1232,25,9)
 
 def cards(pid,names):
     gap=12; w=(1232-gap*(len(names)-1))/len(names)

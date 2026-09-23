@@ -1,26 +1,26 @@
 # RetailPulse — E-commerce Sales Intelligence
 
-## Project overview
+## Why I built it
 
-A three-page Power BI portfolio project that brings sales, customer purchasing and delivery experience into one report. It combines 22 DAX measures with independent Python checks and a free, locally generated summary. No paid API is required.
+An e-commerce manager should be able to answer a few basic questions quickly: Are sales growing? Which categories and states matter most? Are delivery problems affecting the customer experience? The source data sits at different levels, so answering those questions correctly requires more than placing charts on a page.
 
-## Business problem
+I built RetailPulse as a three-page Power BI report that keeps those questions connected and makes the calculation rules clear.
 
-An e-commerce manager needs to understand how sales are changing, which product categories and states contribute to performance, and whether delivery and review metrics warrant investigation. Order-item data must be aggregated carefully so that customers, deliveries and reviews are not counted multiple times.
-
-## What was built
+## What the report covers
 
 - **Executive Overview:** revenue, orders, customers, average order value and year-over-year growth, with monthly, state and category breakdowns.
-- **Product & Customer Analysis:** category performance, customer trends and repeat purchasing within the selected period.
+- **Product & Customer Analysis:** category demand, customer trends, repeat purchasing and revenue per customer.
 - **Performance Drivers:** revenue changes alongside delivery timeliness, delivery duration and order-weighted review scores.
-- **Validation workflow:** 220 independent comparisons across 22 measures and ten filter selections, including combined filters and an empty selection.
-- **Offline summary:** a reproducible template with formatted figures, evidence references and source hashes.
 
-## Important modeling decisions
+The final model contains 22 DAX measures. A separate Python workflow recalculates the results from the CSV files and checks them across ten filter scenarios.
 
-Customer counts use the persistent customer identifier rather than the order-specific customer identifier. Delivery calculations count each order once. Review scores first average valid reviews for each order, then average those order scores. Selected sales orders filter the delivery and review calculations so category and state selections remain relevant.
+## The modeling work that mattered
 
-Year-over-year measures require a single selected calendar year and return blank when a prior-year baseline is unavailable. Revenue includes all order statuses and excludes freight; it should not be described as profit or net recognized revenue.
+The original customer field identifies a customer within an order, so I used the persistent customer identifier for customer counts and repeat-purchase measures. Delivery records are counted once per order. Review scores are first averaged within each order, then averaged across orders so an order with several review rows does not carry extra weight.
+
+Delivery and review calculations receive the selected order set from the sales table. This keeps date, product, state and status filters meaningful without introducing duplicate rows into the sales fact.
+
+Year-over-year measures require a single calendar year and return blank when the comparison period is unavailable. Revenue includes merchandise price across all order statuses and excludes freight; it should not be interpreted as profit or net recognized revenue.
 
 ## Example findings: July 2018
 
@@ -35,35 +35,29 @@ Year-over-year measures require a single selected calendar year and return blank
 | Order-weighted review score | 4.27 / 5 |
 | Reviewed orders | 6,228 |
 
-These are historical observations. Revenue growth does not establish its cause, and these results do not demonstrate business impact from using the dashboard. Investigate category and state contributions alongside order counts before proposing explanations.
+The figures show what happened in the historical data. They do not prove why revenue changed or whether delivery performance caused a review outcome. The next step is to compare category and state contributions alongside order counts.
 
-## Evidence and limitations
+## Quality checks
 
-The model passed 220 source-data comparisons. Forty-nine report definition files passed schema validation. Screenshots from Power BI Desktop confirm that all three pages render with readable titles, KPI cards, slicers, charts, tables and disclosure notes. Scrollbars shown in the category and state visuals are intentional for exploring the full lists.
+The model passed 220 source-data comparisons. Forty-nine report definition files passed schema validation. Power BI Desktop screenshots confirm that the three pages render with readable titles, KPI cards, slicers, charts, tables and disclosure notes. Scrollbars in the category and state visuals are intentional because the lists are longer than the available space.
 
-The dataset covers historical orders from 2016–2018, with incomplete 2018 coverage. Repeat purchasing is measured within the selection, not over customer lifetime. No currency conversion, margin, profit or churn analysis is claimed. The summary is a template, not AI-generated output. Paid API narration was excluded from the final scope.
+The data covers historical orders from 2016–2018, and 2018 is incomplete. Repeat purchasing is measured within the selected period rather than over a customer's lifetime. No currency conversion, margin, profit or churn analysis is claimed.
 
-## Short portfolio description
-
-Built a three-page Power BI e-commerce dashboard with 22 DAX measures covering sales, customer purchasing and delivery experience. Verified metrics through 220 independent Python comparisons, corrected customer and order-level aggregation, and added a free offline summary with traceable figures.
-
-## Two-minute demonstration
+## Two-minute walkthrough
 
 1. Open `powerbi/RetailPulse.pbip` and select July 2018.
-2. Start on Executive Overview: explain revenue, orders and the prior-year comparison.
-3. Open Product & Customer Analysis: compare categories and explain the repeat-customer definition.
-4. Open Performance Drivers: explain late-delivery denominators and order-weighted review scores.
-5. Change the state selection and demonstrate how the related metrics respond.
-6. Finish with the validation evidence and offline summary. Explain the historical-data limitations.
+2. Start on Executive Overview and explain revenue, order volume and the prior-year comparison.
+3. Open Product & Customer Analysis and compare category demand with customer behavior.
+4. Open Performance Drivers and explain the late-delivery denominator and order-weighted review score.
+5. Change the state filter to show how the report responds.
+6. Finish with the validation evidence and the limits of the historical dataset.
 
 ## Dashboard screenshots
 
-The portfolio includes actual Power BI Desktop captures using the full 2018 selection, all months and all states:
+The repository contains Power BI Desktop captures using the full 2018 selection, all months and all states:
 
 - [Executive Overview](../screenshots/01-executive-overview.png)
 - [Product & Customer Analysis](../screenshots/02-product-customers.png)
 - [Performance Drivers](../screenshots/03-performance-drivers.png)
 
-The July 2018 findings above are a separate focused validation example and should not be presented as the active filter state in these screenshots.
-
-Before distributing source data, document its original download location and applicable license. Update the Power Query source paths when moving the project to another workstation.
+The July 2018 example above is a focused validation scenario and is separate from the filter state shown in these screenshots.

@@ -21,7 +21,7 @@ table CategoryTranslation
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\FADOU\Desktop\RetailPulse-AI-Sales-Intelligence\data\product_category_name_translation.csv"),[Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Path\To\RetailPulse-Sales-Intelligence\data\product_category_name_translation.csv"),[Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}}),
 				    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
 				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"product_category_name", type text}, {"product_category_name_english", type text}})

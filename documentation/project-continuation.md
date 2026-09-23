@@ -1,37 +1,28 @@
-# RetailPulse AI continuation
+# RetailPulse implementation notes
 
-Context recovered from the recent task **Build BI Portfolio Project** on 21 September 2026.
+## Report structure
 
-## Original project direction
+RetailPulse has three pages: Executive Overview, Product & Customer Analysis, and Performance Drivers. The pages share synchronized year, month and state slicers.
 
-Build a Power BI sales dashboard with an automated insight narrator. Power BI/DAX calculates metrics; Python packages validated aggregates; an LLM explains those aggregates. The intended report has three pages: Executive Overview, Product & Customer Analysis, and Performance Drivers.
+## Measures added
 
-The earlier conversation stopped while fixing customer measures. Its next planned work was YoY revenue growth, late-delivery rate, average review score, and narrator-ready exports. The customer issue was resolved in the preceding audit using the existing customer dimension, without duplicating customer IDs into FactSales.
+- Revenue PY, YoY Revenue Change and YoY Revenue Growth %
+- Delivered Orders, Delivery Eligible Orders, Late Orders, Late Delivery Rate and Average Delivery Days
+- Reviewed Orders and Average Review Score
+- Customers, Repeat Customers, Repeat Customer Rate and Revenue per Customer
 
-## This continuation
+The date table covers complete calendar years and keeps month names in chronological order.
 
-- Added Revenue PY, YoY Revenue Change, and YoY Revenue Growth %.
-- Added Delivered Orders, Delivery Eligible Orders, Late Orders, Late Delivery Rate, and Average Delivery Days.
-- Added Reviewed Orders and Average Review Score.
-- Extended DimDate to complete calendar years and preserved chronological month sorting.
-- Added aggregate monthly, category, and state exports, a July 2018 narrator input package, and a grounded narration prompt.
+## Calculation rules
 
-Delivery and review measures explicitly transfer the selected sales order IDs to their auxiliary tables. This preserves date, product, state, and status selections without changing model relationships. Delivery metrics count an order once; review averages first average valid scores per order, then average across orders. No order-item multiplication is introduced.
+Delivery and review measures transfer the selected sales order IDs to their supporting tables. This preserves filters from the sales model while keeping one result per order. Delivery metrics count each order once. Review calculations average valid scores within each order before calculating the overall average.
 
-YoY metrics require a single calendar year in the current selection, compare the selected dates with the preceding year, and return blank without a valid baseline. Use DimDate fields for date slicers. Whole-year comparisons can include incomplete historical years: do not present those as like-for-like complete years. The narrator sample explicitly uses July 2018 versus July 2017.
-
-## Remaining stages
-
-1. Three report-page definitions are built in `powerbi/RetailPulse.pbip`, with 41 native elements and 49 schema-validated files. The user reported completing the requested visual/slicer check. Automated screenshot verification remains unavailable. See `dashboard-pages.md`.
-2. Paid AI narration was skipped at the user’s request. The launcher now generates the free offline template without an API key or network request. See `ai-narrator.md`.
-3. Review the narrative against the supplied metrics, then finish portfolio screenshots and the project README.
-
-No public publishing or recurring automation was configured.
+Year-over-year measures require one selected calendar year, compare the selected dates with the preceding year and return blank when a valid baseline is unavailable. Whole-year comparisons may include incomplete historical years, so they should not automatically be described as like-for-like full-year comparisons.
 
 ## Validation results
 
-All 220 source-data comparisons passed: 22 measures across total, 2017, 2018, July 2018, SP, bed_bath_table, delivered, canceled, combined year/state/category, and empty selections. The validator independently recomputes results from the CSV files, including prior-year revenue and order-weighted delivery/review calculations.
+All 220 source-data comparisons passed for 22 measures. The checks cover totals, 2017, 2018, July 2018, São Paulo, the bed/bath/table category, delivered and canceled orders, combined filters and empty selections.
 
-July 2018 sample: revenue 895,507.22; YoY revenue growth 79.81%; late-delivery rate 3.38% (208 of 6,156 eligible orders); average delivery 8.89 calendar days; average review score 4.27/5 across 6,228 reviewed orders. These are observed metrics, not causal findings.
+For the July 2018 validation scenario: revenue was 895,507.22; year-over-year revenue growth was 79.81%; the late-delivery rate was 3.38% (208 of 6,156 eligible orders); average delivery time was 8.89 calendar days; and the average review score was 4.27 out of 5 across 6,228 reviewed orders.
 
-Artifacts: `outputs/measure-validation.json`, `outputs/portfolio-kpi-export.json`, `outputs/ai_metrics.json`, `prompts/executive_summary_prompt.txt`, and `powerbi/measures.dax`. The preceding report was backed up as `outputs/frjkt-before-portfolio-kpis.pbix`.
+The key artifacts are `outputs/measure-validation.json`, `outputs/portfolio-kpi-export.json` and `powerbi/measures.dax`.

@@ -1,24 +1,14 @@
-# RetailPulse AI — Sales Intelligence
+# RetailPulse — Sales Intelligence
 
-A portfolio project combining Power BI analytics, independent KPI validation and a free, local executive-summary template.
+RetailPulse is a three-page Power BI portfolio project built around a practical e-commerce question: **what is driving sales performance, and where should a manager look next?**
 
-## Business question
+The report brings revenue, orders, customers, product demand, delivery performance and review scores into one place. I also built an independent Python validation workflow so the headline figures can be checked against the source CSV files.
 
-How can an e-commerce manager turn sales and customer-experience metrics into a concise management brief without manually copying figures or inventing explanations?
+## Dashboard pages
 
-## Project status
-
-- Three Power BI pages: Executive Overview, Product & Customer Analysis, Performance Drivers.
-- Twenty-two DAX measures; 220 comparisons against the source CSVs passed.
-- Forty-nine dashboard definition files passed schema validation. All three report pages were visually reviewed from Power BI Desktop screenshots.
-- Free offline summary available; no API key, credits or paid service required.
-- Paid AI narration was skipped by choice. The included summary is a template, not AI-generated analysis.
-
-## Open the dashboard
-
-Open `powerbi/RetailPulse.pbip` and keep the sibling report and semantic-model folders together. The original `frjkt.pbix` contains the earlier KPI-only report. Local Power Query sources currently use this workstation's absolute paths; update those paths when moving the project.
-
-## Dashboard preview
+- **Executive Overview** — revenue, orders, customers, average order value and year-over-year growth, with monthly, state and category views.
+- **Product & Customer Analysis** — category demand, customer trends, repeat purchasing and revenue per customer.
+- **Performance Drivers** — revenue changes by state and category, late deliveries, delivery duration and review scores.
 
 ### Executive Overview
 
@@ -32,44 +22,52 @@ Open `powerbi/RetailPulse.pbip` and keep the sibling report and semantic-model f
 
 ![Performance Drivers](screenshots/03-performance-drivers.png)
 
-## Data and definitions
+## A few findings
 
-The project uses the [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), covering historical orders from 2016–2018. The sales fact has 112,650 unique order-item rows and 98,666 orders with items. Raw CSV files are excluded from this repository; see [data setup](data/README.md).
+For July 2018, compared with July 2017:
 
-Revenue sums merchandise prices across all statuses and excludes freight. Customer identity uses the persistent unique customer ID. Delivery measures count orders once; review scores average per order before averaging across orders. The data does not establish profit, margin, refunds or causality. The report explicitly notes that 2018 is incomplete.
+- Merchandise revenue reached **895,507.22**, up **79.81%** year over year.
+- The dataset contains **6,273** orders with items for the month.
+- **208 of 6,156** eligible delivered orders were late, a **3.38%** late-delivery rate.
+- The average delivery time was **8.89 days**.
+- The order-weighted review score was **4.27 out of 5** across **6,228** reviewed orders.
 
-## Workflow
+These are historical observations, not causal conclusions. The dashboard is designed to help narrow the next investigation by category, state and order volume.
 
-```text
-Olist CSVs → Power Query / model → DAX measures → Power BI report
-                                        ↓
-                       Independent CSV validation
-                                        ↓
-                    Aggregate KPI export → Python
-                                        ↓
-             Local offline summary template
-                                        ↓
-                  Executive brief + evidence + provenance
-```
+## Modeling choices
 
-## Free summary
+- Customer counts use the persistent customer identifier rather than the order-specific identifier.
+- Delivery measures count each order once.
+- Review scores are averaged per order before the overall average is calculated.
+- Year-over-year measures require one selected calendar year and return blank when no valid prior-year baseline exists.
+- Revenue includes merchandise prices across all order statuses and excludes freight. It is not profit or net recognized revenue.
+- The 2018 data is incomplete, which is disclosed in the report.
 
-```powershell
-python src/generate_insights.py --preview
-python -m unittest discover -s src -p test_generate_insights.py -v
-```
+## Validation
 
-Double-click `Run AI Brief.cmd` to generate the free summary locally. See [the offline summary](outputs/sample_brief_preview.md) and [summary documentation](documentation/ai-narrator.md). The narrator uses only aggregate facts and rejects unknown fact references and literal numeric claims. Human review is still necessary for interpretation and causal language.
+- **22 DAX measures** checked independently against the source data.
+- **220 comparisons passed** across totals, years, months, states, categories, statuses, combined filters and empty selections.
+- **49 Power BI definition files** passed schema validation.
+- All three pages were reviewed from Power BI Desktop screenshots.
 
-## Documentation
+## Open the project
 
-- [Portfolio case study and demonstration](documentation/portfolio-case-study.md)
+1. Download the [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+2. Place the CSV files in the `data` folder. See [data setup](data/README.md) for the expected filenames.
+3. Update the Power Query source paths for your computer.
+4. Open `powerbi/RetailPulse.pbip` in Power BI Desktop and keep the sibling report and semantic-model folders together.
 
+Raw CSV files, local model caches and backup files are excluded from this repository.
+
+## Repository guide
+
+- [Portfolio case study](documentation/portfolio-case-study.md)
+- [Dashboard pages and interpretation notes](documentation/dashboard-pages.md)
 - [Measure audit](documentation/measure-audit.md)
-- [Project progress and KPI definitions](documentation/project-continuation.md)
-- [Dashboard pages and verification](documentation/dashboard-pages.md)
-- [Narrator setup and limitations](documentation/ai-narrator.md)
+- [Implementation notes and KPI definitions](documentation/project-continuation.md)
+- [DAX measures](powerbi/measures.dax)
+- [Independent validation results](outputs/measure-validation.json)
 
-## AI-assisted development
+## Tools used
 
-An AI assistant helped implement the model checks, dashboard definitions, narration workflow and documentation. Numerical checks were run against source data; the user reported completing the manual dashboard check. Paid API narration is excluded from the current project scope and has not produced a successful brief. No claim of autonomous production deployment is made.
+Power BI Desktop, Power Query, DAX and Python.

@@ -92,7 +92,7 @@ table DimProdut
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\FADOU\Desktop\RetailPulse-AI-Sales-Intelligence\data\olist_products_dataset.csv"),[Delimiter=",", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Path\To\RetailPulse-Sales-Intelligence\data\olist_products_dataset.csv"),[Delimiter=",", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"product_id", type text}, {"product_category_name", type text}, {"product_name_lenght", Int64.Type}, {"product_description_lenght", Int64.Type}, {"product_photos_qty", Int64.Type}, {"product_weight_g", Int64.Type}, {"product_length_cm", Int64.Type}, {"product_height_cm", Int64.Type}, {"product_width_cm", Int64.Type}}),
 				    #"Merged Queries" = Table.NestedJoin(#"Changed Type", {"product_category_name"}, CategoryTranslation, {"product_category_name"}, "CategoryTranslation", JoinKind.LeftOuter),

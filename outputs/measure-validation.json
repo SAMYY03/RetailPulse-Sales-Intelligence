@@ -768,7 +768,7 @@
     {
       "context": "stateSP",
       "measure": "Average Review Score",
-      "expected": 4.19561004484014,
+      "expected": 4.195610044840141,
       "actual": 4.195610044840141,
       "passed": true
     },

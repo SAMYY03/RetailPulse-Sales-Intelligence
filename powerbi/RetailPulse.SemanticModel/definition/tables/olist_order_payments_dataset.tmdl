@@ -49,7 +49,7 @@ table olist_order_payments_dataset
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\FADOU\Desktop\RetailPulse-AI-Sales-Intelligence\data\olist_order_payments_dataset.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Path\To\RetailPulse-Sales-Intelligence\data\olist_order_payments_dataset.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"order_id", type text}, {"payment_sequential", Int64.Type}, {"payment_type", type text}, {"payment_installments", Int64.Type}, {"payment_value", type number}})
 				in

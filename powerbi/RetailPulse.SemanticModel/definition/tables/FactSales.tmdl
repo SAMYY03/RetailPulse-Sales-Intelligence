@@ -123,7 +123,7 @@ table FactSales
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\FADOU\Desktop\RetailPulse-AI-Sales-Intelligence\data\olist_order_items_dataset.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Path\To\RetailPulse-Sales-Intelligence\data\olist_order_items_dataset.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"order_id", type text}, {"order_item_id", Int64.Type}, {"product_id", type text}, {"seller_id", type text}, {"shipping_limit_date", type datetime}, {"price", type number}, {"freight_value", type number}}),
 				    #"Merged Queries" = Table.NestedJoin(#"Changed Type", {"order_id"}, Orders, {"order_id"}, "Orders", JoinKind.LeftOuter),
