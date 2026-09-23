@@ -53,7 +53,15 @@ To inspect the output format without an API call:
 python src/generate_weekly_brief.py --sample
 ```
 
-To generate a fresh local draft, install Ollama, download `qwen2.5:1.5b`, and run the script without `--sample`. No API key or paid service is required. OpenAI remains available as an optional provider with `--provider openai`.
+To generate a fresh local draft on Windows, double-click [`Run Local Brief.cmd`](Run%20Local%20Brief.cmd). It checks that Python, Ollama and `qwen2.5:1.5b` are available before creating the brief. No API key or paid service is required.
+
+You can also run it from a terminal:
+
+```powershell
+python src/generate_weekly_brief.py
+```
+
+OpenAI remains available as an optional provider with `--provider openai`.
 
 ## Modeling choices
 
