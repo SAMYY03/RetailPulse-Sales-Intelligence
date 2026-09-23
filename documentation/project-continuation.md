@@ -29,4 +29,4 @@ The key artifacts are `outputs/measure-validation.json`, `outputs/portfolio-kpi-
 
 ## Generated insight layer
 
-`src/generate_weekly_brief.py` turns seven validated July 2018 measures into a short structured brief. It sends aggregate facts only, rejects unsupported numeric claims and records the source context for every displayed value. `outputs/weekly_sales_brief.sample.md` demonstrates the checked rendering path without making an API request.
+`src/generate_weekly_brief.py` turns seven validated July 2018 measures into a short structured brief. It uses Qwen2.5 through the local Ollama API by default, rejects unsupported numeric claims and records the source context for every displayed value. `outputs/weekly_sales_brief.sample.md` demonstrates the checked rendering path without invoking a model.

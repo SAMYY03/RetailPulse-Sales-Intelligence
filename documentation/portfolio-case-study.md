@@ -14,7 +14,7 @@ I built RetailPulse as a three-page Power BI report that keeps those questions c
 
 The final model contains 22 DAX measures. A separate Python workflow recalculates the results from the CSV files and checks them across ten filter scenarios.
 
-An optional insight layer reads seven allowlisted measures from the completed validation file and sends only those aggregates to a language-model API. The response follows a fixed schema, uses placeholders for every number and is checked again before the Markdown brief is saved. This keeps the narrative traceable to the measures shown in the report.
+An optional insight layer reads seven allowlisted measures from the completed validation file and processes them with a local language model through Ollama. The response follows a fixed schema, uses placeholders for every number and is checked again before the Markdown brief is saved. This keeps the narrative traceable to the measures shown in the report without sending data to an external service.
 
 ## The modeling work that mattered
 

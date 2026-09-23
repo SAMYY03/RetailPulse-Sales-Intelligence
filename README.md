@@ -38,13 +38,14 @@ These are historical observations, not causal conclusions. The dashboard is desi
 
 The optional narrator turns a small allowlist of validated measures into a structured management brief:
 
-`validated metrics → allowlisted facts → LLM → checked structured output → Markdown brief`
+`validated metrics → allowlisted facts → local LLM → checked structured output → Markdown brief`
 
-The script reads seven July 2018 measures from `outputs/measure-validation.json`. It sends only those aggregate facts, requires every number to reference a supplied placeholder, rejects unknown numbers, limits the response to 180 words and saves the result to `outputs/weekly_sales_brief.md`. Raw order and customer records are never sent.
+The script reads seven July 2018 measures from `outputs/measure-validation.json`. By default it runs Qwen2.5 locally through Ollama, requires every number to reference a supplied placeholder, rejects unknown numbers, limits the response to 180 words and saves the result to `outputs/weekly_sales_brief.md`. Raw order and customer records stay on the computer.
 
 - [Narrator script](src/generate_weekly_brief.py)
+- [Locally generated brief](outputs/weekly_sales_brief.md)
 - [Checked sample layout](outputs/weekly_sales_brief.sample.md)
-- [Official Structured Outputs documentation](https://developers.openai.com/api/docs/guides/structured-outputs)
+- [Ollama structured output documentation](https://docs.ollama.com/capabilities/structured-outputs)
 
 To inspect the output format without an API call:
 
@@ -52,7 +53,7 @@ To inspect the output format without an API call:
 python src/generate_weekly_brief.py --sample
 ```
 
-To generate a live draft, set `OPENAI_API_KEY` in your local environment and run the script without `--sample`. The key is read from memory and is never written to the repository.
+To generate a fresh local draft, install Ollama, download `qwen2.5:1.5b`, and run the script without `--sample`. No API key or paid service is required. OpenAI remains available as an optional provider with `--provider openai`.
 
 ## Modeling choices
 
@@ -91,4 +92,4 @@ Raw CSV files, local model caches and backup files are excluded from this reposi
 
 ## Tools used
 
-Power BI Desktop, Power Query, DAX, Python and the OpenAI Responses API.
+Power BI Desktop, Power Query, DAX, Python, Ollama and Qwen2.5. The OpenAI Responses API is supported as an optional provider.

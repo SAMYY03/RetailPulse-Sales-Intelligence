@@ -36,6 +36,15 @@ class WeeklyBriefTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "must pass"):
                 brief.load_facts(path)
 
+    def test_ollama_payload_uses_schema_and_local_model(self):
+        payload = brief.build_ollama_payload(self.facts, "qwen2.5:1.5b")
+        self.assertEqual(payload["model"], "qwen2.5:1.5b")
+        self.assertEqual(payload["format"], brief.OLLAMA_SCHEMA)
+        self.assertEqual(payload["options"]["temperature"], 0)
+        prompt = payload["messages"][1]["content"]
+        self.assertNotIn("895507", prompt)
+        self.assertIn("{{revenue}}", prompt)
+
 
 if __name__ == "__main__":
     unittest.main()
